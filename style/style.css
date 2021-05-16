@@ -1,0 +1,547 @@
+/**
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    contenteditable attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that are clearfixed.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.cf:before,
+.cf:after {
+    content: " ";
+    /* 1 */
+    display: table;
+    /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+
+/**
+  * For IE 6/7 only
+  * Include this rule to trigger hasLayout and contain floats.
+  */
+
+.cf {
+    *zoom: 1;
+}
+
+body {
+    margin: 0;
+    font-family: "Roboto", serif;
+    position: relative;
+}
+
+.bg01 {
+    width: 100%;
+    height: 657px;
+    background-color: rgb(50, 50, 50);
+    position: relative;
+}
+
+.bg01 .top-bar-bg {
+    position: absolute;
+    width: 50%;
+    height: auto;
+    background-color: rgb(15, 15, 15);
+    border-radius: 0 36px 0 36px;
+}
+
+.top-bar-menu {
+    height: 100%;
+    list-style-type: none;
+    text-align: center;
+    margin: 0;
+    padding: 16px;
+}
+
+.top-bar-menu li {
+    display: inline-block;
+    font-size: 16px;
+    padding: 20px;
+}
+
+.top-bar-menu a {
+    text-decoration: none;
+    color: rgb(250, 255, 0);
+    padding: 24px;
+}
+
+.top-bar-menu a:hover {
+    background-color: rgb(250, 255, 0);
+    color: rgb(15, 15, 15);
+    border-radius: 30px;
+    font-weight: bolder;
+}
+
+.dot1 {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.dot2 {
+    position: absolute;
+    bottom: -4px;
+}
+
+.homePhoto {
+    position: absolute;
+    bottom: 30px;
+    left: 60px;
+    z-index: 99;
+}
+
+.profilePhoto {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+
+.profilePhoto img {
+    border-radius: 50%;
+    width: 60px;
+    height: auto;
+}
+
+.profilePhoto p {
+    color: rgb(250, 255, 0);
+    float: left;
+    margin-right: 15px;
+}
+
+.selfDesc {
+    position: absolute;
+    width: 45%;
+    height: auto;
+    top: 24%;
+    right: 0;
+}
+
+.selfDesc .firstSent {
+    color: white;
+    font-size: 20px;
+}
+
+.selfDesc .secondSent {
+    margin-top: -4px;
+    color: rgb(250, 255, 0);
+    font-size: 32px;
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+
+.selfDesc .thParagraph {
+    color: white;
+    font-size: 20px;
+    line-height: 32px;
+    padding-right: 50px;
+}
+
+.bg-contact {
+    width: 380px;
+    height: 60px;
+    background-color: rgb(250, 250, 0);
+    border-radius: 8px;
+    margin-top: 50px;
+    position: relative;
+    float: right;
+    margin-right: 70px;
+}
+
+.email {
+    width: 140px;
+    height: 60px;
+    border-radius: 6px;
+    background-color: rgb(0, 0, 0);
+}
+
+.email:hover {
+    background-color: rgb(61, 61, 61);
+}
+
+.email a {
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.btn-email {
+    padding: 20px 0;
+}
+
+.socmed {
+    position: absolute;
+    top: -16px;
+    right: 0px;
+}
+
+.bg-ls-socmed {
+    list-style-type: none;
+}
+
+.bg-ls-socmed li {
+    display: inline-block;
+    padding: 14px;
+}
+
+.bg-ls-socmed li:hover {
+    background-color: rgb(195, 197, 53);
+    border-radius: 8px;
+}
+
+.bg02 {
+    position: relative;
+    width: 100%;
+    height: 450px;
+    background-color: rgb(221, 221, 221);
+}
+
+.bg02 h1 {
+    position: absolute;
+    left: 37%;
+    padding-top: 16px;
+    font-size: 40px;
+    color: rgb(250, 250, 0);
+    z-index: 999;
+}
+
+.bg02 .dot3 {
+    position: absolute;
+    top: 0;
+}
+
+.bg-contact-02 {
+    width: 380px;
+    height: 60px;
+    background-color: white;
+    border-radius: 8px;
+    margin-top: 50px;
+    position: absolute;
+    top: 28%;
+    left: 30%;
+}
+
+.email-02 {
+    width: 140px;
+    height: 60px;
+    border-radius: 6px;
+    background-color: rgb(250, 250, 0);
+}
+
+.email-02:hover {
+    background-color: rgb(195, 197, 53);
+}
+
+.email-02 a {
+    text-decoration: none;
+    color: black;
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.see-my-projects {
+    position: absolute;
+    top: 0;
+    right: -170px;
+    width: 140px;
+    height: 60px;
+    border-radius: 6px;
+    background-color: rgb(250, 250, 0);
+}
+
+.see-my-projects a {
+    text-decoration: none;
+    color: black;
+    text-align: center;
+    font-weight: bold;
+}
+
+.btn-smp {
+    padding: 20px 0;
+}
+
+.see-my-projects:hover {
+    background-color: rgb(195, 197, 53);
+}
+
+.bg02 .dot4 {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.bg03 {
+    width: 100%;
+    height: 1024px;
+    background-color: rgb(50, 50, 50);
+    position: relative;
+}
+
+.bg-projects {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.bg-projects h1 {
+    font-size: 40px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    position: absolute;
+    top: 14%;
+    right: 26%;
+}
+
+.ctr-image {
+    text-align: center;
+}
+
+.project1 {
+    width: 520px;
+    height: auto;
+    background-color: rgb(0, 0, 0);
+    border-radius: 30px 30px 30px 30px;
+    padding-bottom: 24px;
+    position: absolute;
+    top: 20%;
+    left: 10%;
+}
+
+.project1 h2 {
+    color: rgb(250, 255, 0);
+    padding-left: 24px;
+}
+
+.project1 p {
+    color: white;
+    padding: 0px 24px;
+    line-height: 24px;
+}
+
+.btn-details {
+    margin-top: 52px;
+    width: 170px;
+    height: 59px;
+    background-color: rgb(250, 255, 0);
+    border-radius: 120px;
+    position: relative;
+    float: right;
+    margin-right: 24px;
+}
+
+.btn-details a {
+    color: rgb(15, 15, 15);
+    text-decoration: none;
+    font-weight: 900;
+    font-size: 20px;
+    letter-spacing: 1px;
+    position: absolute;
+    top: 30%;
+    left: 30%;
+}
+
+.project2 {
+    width: 520px;
+    height: auto;
+    background-color: rgb(0, 0, 0);
+    border-radius: 30px 30px 30px 30px;
+    padding-bottom: 24px;
+    position: absolute;
+    top: 20%;
+    right: 10%;
+}
+
+.project2 h2 {
+    color: rgb(250, 255, 0);
+    padding-left: 24px;
+}
+
+.project2 p {
+    color: white;
+    padding: 0px 24px;
+    line-height: 24px;
+}
+
+.btn-more-projects {
+    width: 240px;
+    height: 80px;
+    background-color: rgb(0, 0, 0);
+    border-radius: 120px;
+    position: absolute;
+    bottom: 68px;
+    left: 41%;
+}
+
+.btn-more-projects a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-weight: 900;
+    font-size: 20px;
+    letter-spacing: 1px;
+    position: absolute;
+    top: 35%;
+    left: 23%;
+}
+
+.prev {
+    position: absolute;
+    top: 47%;
+    left: 3%;
+}
+
+.prev img {
+    width: 40px;
+    height: auto;
+}
+
+.next {
+    position: absolute;
+    top: 47%;
+    right: 3%;
+}
+
+.next img {
+    width: 40px;
+    height: auto;
+}
+
+.bg04 {
+    width: 100%;
+    height: 450px;
+    background-color: rgb(221, 221, 221);
+    position: relative;
+}
+
+.bg-tools {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+}
+
+.bg04 h1 {
+    position: absolute;
+    top: 40%;
+    left: 29%;
+    font-size: 40px;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+
+.bg04 .v7 {
+    position: absolute;
+    bottom: 0;
+}
+
+.bg04 .v8 {
+    position: absolute;
+    right: 0;
+}
+
+.stLine {
+    position: absolute;
+    top: 8%;
+    left: 33%;
+    z-index: 99999;
+}
+
+.stLine .tools1,
+.tools2 {
+    list-style-type: none;
+}
+
+.stLine li {
+    display: inline-block;
+    padding: 40px;
+}
+
+.tools1 img {
+    width: 80px;
+    height: auto;
+}
+
+.tools2 img {
+    width: 80px;
+    height: auto;
+}
+
+.ndLine {
+    position: absolute;
+    bottom: 8%;
+    left: 39%;
+    z-index: 99999;
+}
+
+.ndLine li {
+    display: inline-block;
+    padding: 40px;
+}
+
+.footer {
+    width: 100%;
+    height: 80px;
+    background-color: rgb(50, 50, 50);
+    position: relative;
+}
+
+.ellipse-01 {
+    position: absolute;
+    top: 0;
+}
+
+.ellipse-02 {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.ellipse-01 ul {
+    list-style-type: none;
+}
+
+.footer .item-01,
+.item-02,
+.item-03,
+.item-04,
+.item-05,
+.item-06,
+.item-07,
+.item-08 {
+    width: 20px;
+    height: 20px;
+    background-color: rgb(250, 255, 0);
+    border-radius: 50%;
+}
+
+.ellipse-01 li {
+    display: inline-block;
+    padding: 11px;
+    margin-top: 2px;
+    padding-left: 60px;
+}
+
+.ellipse-02 li {
+    display: inline-block;
+    padding: 11px;
+    margin-top: 2px;
+    padding-right: 68px;
+}
+
+.footer h2 {
+    position: absolute;
+    left: 40%;
+    top: 10px;
+    width: 100%;
+    font-size: 20px;
+    letter-spacing: 1px;
+    color: white;
+    font-weight: 500;
+}
